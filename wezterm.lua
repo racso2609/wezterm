@@ -4,7 +4,7 @@ return {
   enable_tab_bar = false,
   window_background_opacity = 0.8,
   color_scheme = "Calamity",
-  font = wezterm.font("CaskaydiaCove Nerd Font"),
+  font = wezterm.font("Caskaydia Cove Nerd Font"),
   enable_scroll_bar = true,
   keys = {
     {key="n", mods="CTRL", action="SpawnWindow"},
