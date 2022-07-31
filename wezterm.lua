@@ -9,6 +9,8 @@ return {
   font = wezterm.font("Caskaydia Cove Nerd Font"),
   enable_scroll_bar = true,
   warn_about_missing_glyphs = false,
+  font_size = 13.5,
+  -- font_size = 15.5,
   keys = {
     {key="n", mods="CTRL", action="SpawnWindow"},
     {key="l", mods="CTRL|SHIFT", action=wezterm.action{ClearScrollback="ScrollbackOnly"}},
