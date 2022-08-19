@@ -1,4 +1,7 @@
-local wezterm = require 'wezterm';
+local status, wezterm = pcall(require, "wezterm")
+if (not status) then return end
+
+
 local act = wezterm.action
 local MOVE_SPEED = 5;
 local keymaps = {}
@@ -22,7 +25,7 @@ keymaps.keys = {
   },
   -- close
   {
-    key = 'w',
+    key = 'W',
     mods = 'CTRL',
     action = act.CloseCurrentPane { confirm = true },
   },
