@@ -3,7 +3,7 @@ local theme = require('lua.theme')
 
 local config = {
   enable_tab_bar = true,
-  window_background_opacity = 0.8,
+  window_background_opacity = 0.6,
   color_scheme = theme.theme,
   font = theme.font,
   enable_scroll_bar = true,
