@@ -2,7 +2,7 @@ local status, wezterm = pcall(require, "wezterm")
 if (not status) then return end
 local font = wezterm.font("Caskaydia Cove Nerd Font")
 
-local themes = { "Gruvbox", 'Gruvbox Dark', "GitHub Dark", "Grape" };
+local themes = { 'Gruvbox Dark', "Grape" };
 local selectedTheme = math.random(#themes);
 
 local colors = {
