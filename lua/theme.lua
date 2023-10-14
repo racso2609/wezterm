@@ -4,7 +4,7 @@ if not status then
 end
 local font = wezterm.font("Caskaydia Cove Nerd Font")
 
-local themes = { "Gruvbox Dark", "Grape" }
+local themes = { "Grape" }
 local selectedTheme = math.random(#themes)
 
 local colors = {
