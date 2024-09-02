@@ -8,6 +8,9 @@ local MOVE_SPEED = 5
 local keymaps = {}
 
 keymaps.keys = {
+	{ key = "LeftArrow", mods = "CTRL", action = wezterm.action({ SendString = "\x1bb" }) },
+	-- Make Option-Right equivalent to Alt-f; forward-word
+	{ key = "RightArrow", mods = "CTRL", action = wezterm.action({ SendString = "\x1bf" }) },
 	-- spawn windows and tabs
 	-- split
 	{
@@ -68,9 +71,7 @@ for i = 1, #resizeKeys do
 	table.insert(keymaps.keys, {
 		key = action.key,
 		mods = "ALT",
-		action = act.ActivatePaneDirection(
-			action.direction
-		),
+		action = act.ActivatePaneDirection(action.direction),
 	})
 end
 for i = 1, 8 do
@@ -79,10 +80,7 @@ for i = 1, 8 do
 
 		key = tostring(i),
 		mods = "CTRL|ALT",
-		action = act.ActivateTab(
-			i
-				- 1
-		),
+		action = act.ActivateTab(i - 1),
 	})
 	-- F1 through F8 to activate that tab
 	-- table.insert(keymaps.keys, {
